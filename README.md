@@ -15,5 +15,6 @@ create a simple Bioinformatics function library in C Language.
 of pattern in original.
 - **int isValidString(char *string, char *alphabet)** - Given a string and the alphabet where all letters are assumed to be unique, this
 function returns 1(true in c) if the string str is valid based on the alphabet. (Returns int as boolean data type is not supported in C.)
-- **int getSkew(char *genome, int index)** - Given a genome string and a valid index, returns the G-C skew of the given genome.
+- **int getSkew(char *genome, int index)** - Given a genome string and a valid nth place of nucleotide, returns the G-C skew of the given genome.
+- **int getMaxSkew(char *genome, int index)** - Given a genome string and a valid nth place of nucleotide, returns the maximum G-C skew of the given genome from the first to the nth nucleotide.
 
