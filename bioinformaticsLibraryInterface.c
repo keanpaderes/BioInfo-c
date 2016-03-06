@@ -12,9 +12,10 @@ int interfaceMenu(){
     printf("\n 1.) getHammingDistance");
     printf("\n 2.) countSubstrPattern");
     printf("\n 3.) isValidString");
+    printf("\n 4.) getSkew");
     printf("\n 0.) Exit");
     printf("\n\n Choice: ");
-    scanf("%i", &choice);    
+    fscanf(stdin, "%i", &choice);  
     return choice;
 }
 
@@ -33,6 +34,9 @@ int main(){
                 break;
             case 3:
                 validString();
+                break;
+            case 4:
+                gcSkew();
                 break;
             case 0:
                 return 0;

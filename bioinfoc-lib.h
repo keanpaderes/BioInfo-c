@@ -71,3 +71,21 @@ int isValidString(char *string, char *alphabet){
     //Returns 1 if all chars in the alphabet is found in the string.
     return 1;
 }
+
+int getSkew(char *genome, int index){
+    /*
+        Checks if the string is based on the letters of a given alphabet.
+        NOTE: It is assumed that parameters are error proof at this point.
+    */
+    int lengthGenome, genomeIndex, gcount = 0, ccount = 0, gcSkew;
+    //Gets the size of the genome.
+
+    //Checks each letter of the string if it exist in the alphabet.
+    for(genomeIndex = 0; genomeIndex < index; genomeIndex++){
+        if(genome[genomeIndex] == 'G') gcount++;
+        else if(genome[genomeIndex] == 'C') ccount++;
+    }
+    
+    gcSkew = gcount - ccount;
+    return gcSkew;
+}
