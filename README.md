@@ -6,7 +6,7 @@ Bioinformatics is a interdisciplinary field that analyzes biological data using 
 create a simple Bioinformatics function library in C Language.
 
 ## Instructions
-- **Running with Interface** - I've included an interface to use the functions. In order to run the interface, compile it and you're good to go.
+- **Running with CL Interface** - I've included a command line interface to use the functions. In order to run the interface, compile it and you're good to go.
 - **Using as a library** - Everything from the bioinfoc-lib.h is stand-alone. Just copy it to your project folder and import it.
 
 ## Functions
