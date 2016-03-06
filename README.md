@@ -11,4 +11,6 @@ create a simple Bioinformatics function library in C Language.
 
 ## Functions
 - **int getHammingDistance (char *str1, char *str)** - Given two strings str1 and str2 of same length (not 0 or negative!), it gives back an integer of the number of inversions per character need to transform str1 to str2 or vise-versa.
+- **int countSubstrPattern(char *original, char *pattern)** - Given a string original and pattern, we will count the number of occurrence
+of pattern in original.
 
