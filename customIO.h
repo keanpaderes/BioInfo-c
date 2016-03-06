@@ -35,8 +35,28 @@ void hammingDistance(){
     str2 = getLine(stdin, 10);
     
     hd = getHammingDistance(str1, str2);
-    if(hd == -1) printf("Error! Strings are not equal!");
+    if(hd == -1) printf("Error! Strings are not equal or one of the strings is empty!");
     else printf("\nThe hamming distance of %s and %s is %i.", str1, str2, hd);
+    
+    free(str1);
+    free(str2);
+}
+
+void subPattern(){
+/*
+    Caller function for the countSubstrPattern() function.
+*/
+    char *str1, *str2;
+    int occurence;
+    
+    getchar(); 
+    printf("\nEnter original string: ");
+    str1 = getLine(stdin, 10);
+    printf("\nEnter pattern to be counted: ");
+    str2 = getLine(stdin, 10);
+    
+    occurence = countSubstrPattern(str1, str2);
+    printf("\nThe number of occurence of %s in %s is %i.", str2, str1, occurence);
     
     free(str1);
     free(str2);
