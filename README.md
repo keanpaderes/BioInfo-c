@@ -14,6 +14,6 @@ create a simple Bioinformatics function library in C Language.
 - **int countSubstrPattern(char *original, char *pattern)** - Given a string original and pattern, counts the number of occurrence
 of pattern in original.
 - **int isValidString(char *string, char *alphabet)** - Given a string and the alphabet where all letters are assumed to be unique, this
-function returns 1(true in c) if the string str is valid based on the alphabet. (Return int as boolean is not supported in C.)
-
+function returns 1(true in c) if the string str is valid based on the alphabet. (Returns int as boolean data type is not supported in C.)
+- **int getSkew(char *genome, int index)** - Given a genome string and a valid index, returns the G-C skew of the given genome.
 
