@@ -1,6 +1,7 @@
 /*
-    Functions required by the CL interface to use the bioinfoc-lib.h library
+    Functions required by the CL interface to use the bioinfoc-lib.h library.
 */
+
 char *getLine(FILE* fp, size_t size){
 /*
     Gets string of unknown size.
