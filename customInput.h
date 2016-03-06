@@ -1,12 +1,13 @@
-// Custom getting inputs
-
-
 char *getLine(FILE* fp, size_t size){
+/*
+    Gets string of unknown size.
+    Reference: http://stackoverflow.com/questions/16870485/how-can-i-read-an-input-string-of-unknown-length
+*/
     char *str;
     int ch;
     size_t len = 0;
 
-    str = realloc(NULL, sizeof(char)*size);//size is start size
+    str = realloc(NULL, sizeof(char)*size);
     if(!str) return str;
     while(EOF!=(ch=fgetc(fp)) && ch != '\n'){
         str[len++]=ch;
@@ -21,6 +22,9 @@ char *getLine(FILE* fp, size_t size){
 }
 
 void hammingDistance(){
+/*
+    Caller function for the getHammingDistance() function.
+*/
     char *str1, *str2;
     int hd;
     

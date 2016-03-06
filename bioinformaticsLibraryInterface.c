@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "bioinfo.h"
+#include "bioinfoc-lib.h"
 #include "customInput.h"
 
 int interfaceMenu(){
