@@ -93,7 +93,7 @@ void gcSkew(){
     getchar(); 
     printf("\n\nEnter genome: ");
     str = getLine(stdin, 10);
-    printf("\nEnter index(Does not use zero-indexing): ");
+    printf("\nEnter the position of the ending nucleotide (Does not use zero-indexing): ");
     fscanf(stdin, "%i", &index);
     
     //Error-catching before calling the function.
@@ -117,6 +117,45 @@ void gcSkew(){
     }
     
     printf("\nThe G-C Skew of genome %s is %i.", str, skew);
+    end:
+        free(str);
+}
+
+void maxSkew(){
+/*
+    Caller function for the getMaxSkew() function.
+*/
+    char *str;
+    int index;
+    int max;
+    
+    getchar(); 
+    printf("\n\nEnter genome: ");
+    str = getLine(stdin, 10);
+    printf("\nEnter the position of the ending nucleotide (Does not use zero-indexing): ");
+    fscanf(stdin, "%i", &index);
+    
+    //Error-catching before calling the function.
+    if(strlen(str) == 0){
+        //Checks if input genome has length of zero.
+        printf("\nGenome's length must be greater than 0!");
+        gcSkew();
+        goto end;
+    } else if (index <= 0){
+        //Checks if input index is not zero or less.
+        printf("\nIndex given must not be zero or lower!");
+        gcSkew();
+        goto end;
+    } else if (index-1 >= strlen(str)){
+        //Checks if index given is out of bounds.
+        printf("\nIndex out of bounds!");
+        gcSkew();
+        goto end;
+    } else{
+        max = getMaxSkew(str, index);    
+    }
+    
+    printf("\nThe Maximum G-C Skew of genome %s is %i.", str, max);
     end:
         free(str);
 }

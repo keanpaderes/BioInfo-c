@@ -13,6 +13,7 @@ int interfaceMenu(){
     printf("\n 2.) countSubstrPattern");
     printf("\n 3.) isValidString");
     printf("\n 4.) getSkew");
+    printf("\n 5.) getMaxSkew");
     printf("\n 0.) Exit");
     printf("\n\n Choice: ");
     fscanf(stdin, "%i", &choice);  
@@ -37,6 +38,9 @@ int main(){
                 break;
             case 4:
                 gcSkew();
+                break;
+            case 5:
+                maxSkew();
                 break;
             case 0:
                 return 0;

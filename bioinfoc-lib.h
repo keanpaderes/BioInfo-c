@@ -72,20 +72,38 @@ int isValidString(char *string, char *alphabet){
     return 1;
 }
 
-int getSkew(char *genome, int index){
+int getSkew(char *genome, int nthNucleotide){
     /*
-        Checks if the string is based on the letters of a given alphabet.
+        Computes the G-C skew of the given genome.
         NOTE: It is assumed that parameters are error proof at this point.
     */
     int lengthGenome, genomeIndex, gcount = 0, ccount = 0, gcSkew;
     //Gets the size of the genome.
 
     //Checks each letter of the string if it exist in the alphabet.
-    for(genomeIndex = 0; genomeIndex < index; genomeIndex++){
+    for(genomeIndex = 0; genomeIndex < nthNucleotide; genomeIndex++){
         if(genome[genomeIndex] == 'G') gcount++;
         else if(genome[genomeIndex] == 'C') ccount++;
     }
     
     gcSkew = gcount - ccount;
     return gcSkew;
+}
+
+int getMaxSkew(char *genome, int nthNucleotide){
+    /*
+        Gets the maximum G-C skew from the n nucleotides.
+        NOTE: It is assumed that parameters are error proof at this point.
+    */
+    int genomeIndex, currSkewVal, maxSkewVal;
+    
+    //Gets the first skew and assigns it as the initial maximum skew value.
+    maxSkewVal = getSkew(genome, 1);
+    //Checks each letter of the string if it exist in the alphabet.
+    for(genomeIndex = 0; genomeIndex < nthNucleotide; genomeIndex++){
+        currSkewVal = getSkew(genome, genomeIndex+1);
+        if(currSkewVal > maxSkewVal) maxSkewVal = currSkewVal;
+    }
+
+    return maxSkewVal;
 }
