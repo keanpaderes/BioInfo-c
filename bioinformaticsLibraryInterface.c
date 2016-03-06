@@ -5,6 +5,9 @@
 #include "customIO.h"
 
 int interfaceMenu(){
+    /*
+        Gives a simple CL Interface for the functions.
+    */
     int choice;
     
     printf("\n\n Simple Bioinformatics Library");
