@@ -1,3 +1,9 @@
+/*
+    Functions that does simple bioinformatics work.
+    Created by: Irvin Kean Paulus T. Paderes
+    Section: AB-3L
+*/
+
 int getHammingDistance(char *str1, char *str2){
     /*
         Counts the number of different characters at each index in both strings.
@@ -99,11 +105,31 @@ int getMaxSkew(char *genome, int nthNucleotide){
     
     //Gets the first skew and assigns it as the initial maximum skew value.
     maxSkewVal = getSkew(genome, 1);
-    //Checks each letter of the string if it exist in the alphabet.
+    
+    //Gets the skew values at each nucleotide.
     for(genomeIndex = 0; genomeIndex < nthNucleotide; genomeIndex++){
         currSkewVal = getSkew(genome, genomeIndex+1);
         if(currSkewVal > maxSkewVal) maxSkewVal = currSkewVal;
     }
 
     return maxSkewVal;
+}
+
+int getMinSkew(char *genome, int nthNucleotide){
+    /*
+        Gets the minimum G-C skew from the n nucleotides.
+        NOTE: It is assumed that parameters are error proof at this point.
+    */
+    int genomeIndex, currSkewVal, minSkewVal;
+    
+    //Gets the first skew and assigns it as the initial minimum skew value.
+    minSkewVal = getSkew(genome, 1);
+    
+    //Gets the skew values at each nucleotide.
+    for(genomeIndex = 0; genomeIndex < nthNucleotide; genomeIndex++){
+        currSkewVal = getSkew(genome, genomeIndex+1);
+        if(currSkewVal < minSkewVal) minSkewVal = currSkewVal;
+    }
+
+    return minSkewVal;
 }
