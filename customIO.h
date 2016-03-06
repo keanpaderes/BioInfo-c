@@ -61,3 +61,23 @@ void subPattern(){
     free(str1);
     free(str2);
 }
+
+void validString(){
+/*
+    Caller function for the isValidString() function.
+*/
+    char *str1, *str2;
+    int boolean;
+    
+    getchar(); 
+    printf("\nEnter string: ");
+    str1 = getLine(stdin, 10);
+    printf("\nEnter alphabet: ");
+    str2 = getLine(stdin, 10);
+    
+    if(isValidString(str1, str2)) printf("\nThe string %s is valid in the alphabet %s.", str1, str2);
+    else printf("\nThe string %s is NOT valid in the alphabet %s.", str1, str2);
+    
+    free(str1);
+    free(str2);
+}

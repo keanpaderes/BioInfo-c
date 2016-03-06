@@ -48,3 +48,26 @@ int countSubstrPattern(char *original, char *pattern){
     //Returns the number of count of the pattern.
     return count;
 }
+
+int isValidString(char *string, char *alphabet){
+    /*
+        Checks if the string is based on the letters of a given alphabet.
+    */
+    int len1, len2, alphabetIndex, stringIndex, charCount;
+    //Gets the sizes of both strings.
+    len1 = strlen(string);
+    len2 = strlen(alphabet);
+    
+    //Checks each letter of the string if it exist in the alphabet.
+    for(stringIndex = 0; stringIndex < len1; stringIndex++){
+        charCount = 0; //Counts the current character
+        //Traverses the alphabet.
+        for(alphabetIndex = 0; alphabetIndex < len2; alphabetIndex++){
+            if(string[stringIndex] == alphabet[alphabetIndex]) charCount++;
+        }
+        //If the character is not found in the string,
+        if(charCount == 0) return 0;
+    }
+    //Returns 1 if all chars in the alphabet is found in the string.
+    return 1;
+}

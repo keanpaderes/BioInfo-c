@@ -11,6 +11,7 @@ int interfaceMenu(){
     printf("\n Functions:");
     printf("\n 1.) getHammingDistance");
     printf("\n 2.) countSubstrPattern");
+    printf("\n 3.) isValidString");
     printf("\n 0.) Exit");
     printf("\n\n Choice: ");
     scanf("%i", &choice);    
@@ -29,6 +30,9 @@ int main(){
                 break;
             case 2:
                 subPattern();
+                break;
+            case 3:
+                validString();
                 break;
             case 0:
                 return 0;
