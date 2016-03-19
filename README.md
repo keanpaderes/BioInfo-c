@@ -5,6 +5,8 @@ A CMSC128 assignment, a Simple Bioinformatics Library in programmed in C.
 Bioinformatics is a interdisciplinary field that analyzes biological data using software tools. This mini-project aims to 
 create a simple Bioinformatics function library in C Language.
 
+<i><em>URL to the project specification</em> - [https://goo.gl/cgsfP4](https://goo.gl/cgsfP4https://goo.gl/cgsfP4)</i>
+
 ## Instructions
 - **Running with CL Interface** - I've included a command line interface to use the functions. In order to run the interface, compile it and you're good to go.
 - **Using as a library** - Everything from the bioinfoc-lib.h is stand-alone. Just copy it to your project folder and import it.
